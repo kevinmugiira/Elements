@@ -1,0 +1,36 @@
+<!-- custom_checkbox_border.xml -->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    &lt;!&ndash; Border &ndash;&gt;-->
+<!--    <item>-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <solid android:color="@android:color/transparent" />-->
+<!--            <stroke-->
+<!--                android:width="17dp"-->
+<!--            android:color="#C3FFFFFF" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    &lt;!&ndash; Checkbox &ndash;&gt;-->
+<!--    <item android:top="2dp" android:right="2dp" android:bottom="2dp" android:left="2dp">-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <solid android:color="@android:color/transparent" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--</layer-list>-->
+
+<!-- custom_checkbox.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Checked state -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#88FFFFFF" /> <!-- Set checked color to white -->
+            <!-- You might want to include additional customization for the checked state -->
+        </shape>
+    </item>
+    <!-- Unchecked state -->
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#C3FFFFFF" /> <!-- Set unchecked color to transparent -->
+            <!-- You might want to include additional customization for the unchecked state -->
+        </shape>
+    </item>
+</selector>

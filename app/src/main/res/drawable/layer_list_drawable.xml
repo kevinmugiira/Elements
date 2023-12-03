@@ -1,0 +1,7 @@
+<!-- layer_list_drawable.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Layer 1: drawable_1 -->
+    <item android:drawable="@drawable/rounded_border" />
+    <!-- Layer 2: drawable_2 -->
+    <item android:drawable="@drawable/white_border" />
+</layer-list>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#EE0345A7"> <!-- Blue Background -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"> <!-- Blue Background -->
+
+        <!-- Back Button and 'REGISTER' Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back"
+
+                android:layout_marginRight="16dp"
+                android:contentDescription="back"
+                android:onClick="onBackPressed"/>
+            <!-- Back Button -->
+<!--            <Button-->
+<!--                android:id="@+id/backButton"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:background="@drawable/white_border"-->
+<!--                android:text="<"-->
+<!--                android:textColor="#C3FFFFFF"-->
+<!--                android:drawableStart="@drawable/ic_arrow_back"-->
+<!--                android:textSize="26sp"-->
+<!--                android:drawablePadding="8dp"-->
+<!--                android:paddingStart="16dp"-->
+<!--                android:paddingEnd="16dp"/>-->
+
+            <!-- 'REGISTER' Text -->
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:textColor="#C3FFFFFF"
+                android:layout_marginLeft=""
+                android:gravity="center_vertical"
+                android:paddingStart="1dp"
+                android:text="Register"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="1dp"/>
+        </LinearLayout>
+
+        <!-- Description Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#C3FFFFFF"
+            android:text="Please provide correct details below to get registered in our mobile App."
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+    <!-- Country Picker -->
+
+        <Spinner
+            android:id="@+id/spinnerCountry"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:spinnerMode="dropdown"
+
+            android:layout_marginBottom="16dp" />
+
+        <!-- ID Input -->
+        <EditText
+            android:id="@+id/editTextID"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/white_border"
+            android:textColor="#C3FFFFFF"
+            android:text="ID NUMBER"
+            android:inputType="text"
+            android:autofillHints="ID"
+            android:layout_marginBottom="16dp"
+            android:paddingLeft="20dp"/>
+    </LinearLayout>
+    <!-- First Name Input -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="05dp"
+        android:textColor="#C3FFFFFF"
+        android:text="SURNAME"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp" />
+    <EditText
+        android:id="@+id/editTextFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/white_border"
+        android:textColor="#C3FFFFFF"
+        android:autofillHints="Surname"
+        android:inputType="text" />
+
+    <!-- Last Name Input -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="05dp"
+        android:textColor="#C3FFFFFF"
+        android:text="OTHER NAMES"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp" />
+    <EditText
+        android:id="@+id/editTextLastName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/white_border"
+        android:textColor="#C3FFFFFF"
+        android:autofillHints="Other Names"
+        android:inputType="text" />
+
+    <!-- Email Input -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="05dp"
+        android:textColor="#C3FFFFFF"
+        android:text="EMAIL ADDRESS"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp" />
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/white_border"
+        android:textColor="#C3FFFFFF"
+        android:autofillHints="emailAddress" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Optional"
+        android:textColor="#905A56"
+        android:textSize="12sp"/>
+
+    <!-- Checkbox with Text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <CheckBox
+            android:id="@+id/checkBoxAgree"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/white"/>
+<!--            android:button="@drawable/custom_checkbox_border"-->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By continuing you are agreeing to our Terms and Conditions as well as our Privacy Policy"
+            android:textColor="#C3FFFFFF"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- Continue Button -->
+        <Button
+            android:id="@+id/buttonContinue"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="CONTINUE"
+            android:textSize="22sp"
+            android:backgroundTint="#E60505" />
+
+    </LinearLayout>
+</LinearLayout>

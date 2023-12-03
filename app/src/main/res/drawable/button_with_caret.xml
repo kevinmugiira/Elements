@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background for the button (adjust colors and shape as needed) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FF0000" /> <!-- Background color for the button -->
+            <!-- Add more attributes for corner radius, stroke, etc., if needed -->
+        </shape>
+    </item>
+    <!-- Caret symbol as text -->
+    <item android:right="8dp" android:gravity="center_vertical">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/caret_left" /> <!-- Replace with your caret drawable -->
+    </item>
+</layer-list>
