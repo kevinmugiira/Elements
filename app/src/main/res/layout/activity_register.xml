@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#EE0345A7"> <!-- Blue Background -->
+    android:background="#EE0345A7"
+    android:fitsSystemWindows="true"
+    tools:context=".RegisterActivity"> <!-- Blue Background -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,6 +24,7 @@
             android:orientation="horizontal"
             android:gravity="start|center_vertical">
 
+            <!-- back button-->
             <ImageView
                 android:id="@+id/backArrow"
                 android:layout_width="wrap_content"
@@ -30,27 +34,12 @@
                 android:layout_marginRight="16dp"
                 android:contentDescription="back"
                 android:onClick="onBackPressed"/>
-            <!-- Back Button -->
-<!--            <Button-->
-<!--                android:id="@+id/backButton"-->
-<!--                android:layout_width="50dp"-->
-<!--                android:layout_height="50dp"-->
-<!--                android:background="@drawable/white_border"-->
-<!--                android:text="<"-->
-<!--                android:textColor="#C3FFFFFF"-->
-<!--                android:drawableStart="@drawable/ic_arrow_back"-->
-<!--                android:textSize="26sp"-->
-<!--                android:drawablePadding="8dp"-->
-<!--                android:paddingStart="16dp"-->
-<!--                android:paddingEnd="16dp"/>-->
 
-            <!-- 'REGISTER' Text -->
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:textColor="#C3FFFFFF"
-                android:layout_marginLeft=""
                 android:gravity="center_vertical"
                 android:paddingStart="1dp"
                 android:text="Register"
@@ -75,15 +64,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
+
+
     <!-- Country Picker -->
 
-        <Spinner
-            android:id="@+id/spinnerCountry"
-            android:layout_width="70dp"
-            android:layout_height="40dp"
-            android:spinnerMode="dropdown"
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/country_picker"
+            app:ccp_showFullName="false"
+            app:ccp_showPhoneCode="false"
+            app:ccp_showNameCode="false"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_showArrow="true"
+            app:ccp_textSize="14sp"
+            app:ccpDialog_keyboardAutoPopup="false"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@drawable/country_picker_border">
 
-            android:layout_marginBottom="16dp" />
+        </com.hbb20.CountryCodePicker>
 
         <!-- ID Input -->
         <EditText
@@ -92,9 +90,9 @@
             android:layout_height="40dp"
             android:layout_weight="1"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/white_border"
+            android:background="@drawable/country_picker_border"
             android:textColor="#C3FFFFFF"
-            android:text="ID NUMBER"
+            android:text="ID Number"
             android:inputType="text"
             android:autofillHints="ID"
             android:layout_marginBottom="16dp"
@@ -107,6 +105,7 @@
         android:layout_marginBottom="05dp"
         android:textColor="#C3FFFFFF"
         android:text="SURNAME"
+        android:textStyle="bold"
         android:textSize="12sp"
         android:layout_marginTop="8dp" />
     <EditText
@@ -126,6 +125,7 @@
         android:layout_marginBottom="05dp"
         android:textColor="#C3FFFFFF"
         android:text="OTHER NAMES"
+        android:textStyle="bold"
         android:textSize="12sp"
         android:layout_marginTop="8dp" />
     <EditText
@@ -145,6 +145,7 @@
         android:layout_marginBottom="05dp"
         android:textColor="#C3FFFFFF"
         android:text="EMAIL ADDRESS"
+        android:textStyle="bold"
         android:textSize="12sp"
         android:layout_marginTop="8dp" />
     <EditText
@@ -176,7 +177,7 @@
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_marginRight="20dp"
-            android:backgroundTint="@color/white"/>
+            android:background="@drawable/rounded_border"/>
 <!--            android:button="@drawable/custom_checkbox_border"-->
 
 
@@ -184,6 +185,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="By continuing you are agreeing to our Terms and Conditions as well as our Privacy Policy"
+            android:textStyle="bold"
             android:textColor="#C3FFFFFF"
             android:textSize="14sp"/>
     </LinearLayout>

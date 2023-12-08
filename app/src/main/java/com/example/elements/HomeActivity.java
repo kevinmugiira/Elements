@@ -1,6 +1,7 @@
 package com.example.elements;
 
 import android.os.Bundle;
+import android.widget.RelativeLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,10 +20,15 @@ public class HomeActivity extends AppCompatActivity {
 
     ArrayList<ServicesModel> serviceModel = new ArrayList<>();
 
-    int[] serviceImages = {R.drawable.bank_account,
+    RecyclerView recyclerView;
+
+    int serviceImage1 = R.drawable.bank_account;
+    int serviceImage2 = R.drawable.editgroup;
+    int serviceImage3 = R.drawable.loans;
+    int[] serviceImages = {
+            R.drawable.bank_account,
             R.drawable.editgroup,
             R.drawable.loans,
-            R.drawable.members,
             R.drawable.members,
             R.drawable.myapprovals,
             R.drawable.withdrawal};
@@ -39,20 +45,30 @@ public class HomeActivity extends AppCompatActivity {
             return insets;
         });
 
-        RecyclerView recyclerView = findViewById(R.id.myRecyclerView);
+        recyclerView = findViewById(R.id.myRecyclerView);
         setUpServicesModel();
 
-        ServicesAdapter adapter = new ServicesAdapter(this, serviceModel);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
 
     }
 
     private void setUpServicesModel() {
-        String[] serviceNames = getResources().getStringArray(R.array.services);
-
-        for (int i = 0; i < serviceNames.length; i++) {
-            serviceModel.add(new ServicesModel(serviceNames[i], serviceImages[i]));
+//        String[] serviceNames = getResources().getStringArray(R.array.services);
+//
+//        for (int i = 0; i < serviceNames.length; i++) {
+//            serviceModel.add(new ServicesModel(serviceNames[i], serviceImages[i]));
+//        }
+        // Ensure servicesModels is not null
+        if (serviceModel == null) {
+            serviceModel = new ArrayList<>();
         }
+
+        serviceModel.add(new ServicesModel(
+                "Bank Account", "Loans", "My Approvals",
+                serviceImage1, serviceImage2, serviceImage3
+        ));
+        ServicesAdapter adapter = new ServicesAdapter(this, serviceModel);
+        recyclerView.setAdapter(adapter);
     }
 }

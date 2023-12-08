@@ -21,7 +21,12 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.MyView
 
     public ServicesAdapter(Context context, ArrayList<ServicesModel> servicesModels){
         this.context = context;
-        this.servicesModels = servicesModels;
+        // Check for null and handle it
+        if (servicesModels == null) {
+            this.servicesModels = new ArrayList<>();
+        } else {
+            this.servicesModels = servicesModels;
+        }
     }
 
     @NonNull
@@ -36,12 +41,12 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull ServicesAdapter.MyViewHolder holder, int position) {
         // assigning values to the views created in recycler_view_row layout file
-        holder.myTextView1.setText(servicesModels.get(position).getServiceName());
-        holder.myTextView2.setText(servicesModels.get(position).getServiceName());
-        holder.myTextView3.setText(servicesModels.get(position).getServiceName());
-        holder.myImage1.setImageResource(servicesModels.get(position).getImage());
-        holder.myImage2.setImageResource(servicesModels.get(position).getImage());
-        holder.myImage3.setImageResource(servicesModels.get(position).getImage());
+        holder.textView1.setText(servicesModels.get(position).getServiceName1());
+        holder.textView2.setText(servicesModels.get(position).getServiceName2());
+        holder.textView3.setText(servicesModels.get(position).getServiceName3());
+        holder.imageView1.setImageResource(servicesModels.get(position).getImage1());
+        holder.imageView2.setImageResource(servicesModels.get(position).getImage2());
+        holder.imageView3.setImageResource(servicesModels.get(position).getImage3());
     }
 
     @Override
@@ -52,21 +57,21 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.MyView
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         // grab the views from the recyclerview
-        ImageView myImage1;
-        ImageView myImage2;
-        ImageView myImage3;
-        TextView myTextView1;
-        TextView myTextView2;
-        TextView myTextView3;
+        ImageView imageView1;
+        ImageView imageView2;
+        ImageView imageView3;
+        TextView textView1;
+        TextView textView2;
+        TextView textView3;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            myImage1 = itemView.findViewById(R.id.imageView1);
-            myImage2 = itemView.findViewById(R.id.imageView2);
-            myImage3 = itemView.findViewById(R.id.imageView3);
-            myTextView1 = itemView.findViewById(R.id.textView1);
-            myTextView2 = itemView.findViewById(R.id.textView2);
-            myTextView3 = itemView.findViewById(R.id.textView3);
+            imageView1 = itemView.findViewById(R.id.imageView1);
+            imageView2 = itemView.findViewById(R.id.imageView2);
+            imageView3 = itemView.findViewById(R.id.imageView3);
+            textView1 = itemView.findViewById(R.id.textView1);
+            textView2 = itemView.findViewById(R.id.textView2);
+            textView3 = itemView.findViewById(R.id.textView3);
         }
     }
 }

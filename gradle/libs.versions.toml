@@ -1,5 +1,7 @@
 [versions]
+advancedHttpurlconnection = "1.2"
 agp = "8.3.0-alpha13"
+ccp = "2.1.2"
 kotlin = "1.9.0"
 coreKtx = "1.12.0"
 junit = "4.13.2"
@@ -17,9 +19,12 @@ lifecycleLivedataKtx = "2.6.2"
 lifecycleViewmodelKtx = "2.6.2"
 activity = "1.8.0"
 cardview = "1.0.0"
+annotation = "1.6.0"
 
 [libraries]
+advancedHttpurlConnection = { module = "com.github.VishnuSivadasVS:Advanced-HttpURLConnection", version.ref = "advancedHttpurlconnection" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+ccp = { module = "com.hbb20:ccp", version = "2.7.3" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -42,6 +47,7 @@ androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecy
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

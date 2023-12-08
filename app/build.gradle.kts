@@ -70,11 +70,17 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.cardview)
+    implementation(libs.androidx.annotation)
     testImplementation(libs.junit)
+    implementation(libs.ccp)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+//    com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.2
+    implementation(libs.advancedHttpurlConnection)
+//    implementation(libs.Advanced.HttpURLConnection)
 }
