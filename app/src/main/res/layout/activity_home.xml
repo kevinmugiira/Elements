@@ -246,7 +246,7 @@
 
                 android:padding="8dp"
                 android:text="My Upcoming Contributions"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textStyle="bold"/>
 
             <TextView

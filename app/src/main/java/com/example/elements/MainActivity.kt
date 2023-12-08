@@ -90,13 +90,13 @@ fun MyScreenWithBackground(context: Context) {
     }
 }
 
-@Preview
-@Composable
-fun MyScreenBackgroundPreview() {
-    ElementsTheme {
-        MyScreenWithBackground(context = this)
-    }
-}
+//@Preview
+//@Composable
+//fun MyScreenBackgroundPreview() {
+//    ElementsTheme {
+//        MyScreenWithBackground(context = this)
+//    }
+//}
 
 data class User(val phoneNumber: String)
 
