@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
     android:background="#EE0345A7"
@@ -30,7 +34,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_back"
-
                 android:layout_marginRight="16dp"
                 android:contentDescription="back"
                 android:onClick="onBackPressed"/>
@@ -92,7 +95,8 @@
             android:layout_marginLeft="20dp"
             android:background="@drawable/country_picker_border"
             android:textColor="#C3FFFFFF"
-            android:text="ID Number"
+            android:hint="ID Number"
+            android:textColorHint="@color/white"
             android:inputType="text"
             android:autofillHints="ID"
             android:layout_marginBottom="16dp"
@@ -202,4 +206,4 @@
             android:backgroundTint="#E60505" />
 
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

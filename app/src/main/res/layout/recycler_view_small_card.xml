@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/small_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="28dp"
+        app:cardBackgroundColor="#F6F6F8"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TableLayout
+                android:id="@+id/table_contributions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:id="@+id/table_row_eclectics_chama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- First Row -->
+                    <TextView
+                        android:id="@+id/text_view_eclectics_chama"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="3dp"
+                        android:text="Eclectics Chama"
+                        android:textColor="#07A9EA"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_view_defaulted"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="3dp"
+                        android:text="Defaulted"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/table_row_due_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- First Row -->
+                    <TextView
+                        android:id="@+id/text_view_due_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="3dp"
+                        android:text="Due Date: 06-09-2021"
+                        android:textColor="#999898"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_view_penalty_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="3dp"
+                        android:text="Penalty Amount"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/table_row_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Second Row -->
+                    <TextView
+                        android:id="@+id/text_view_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="3dp"
+                        android:text="Amount Due: Ksh 140.00"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_view_ksh"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="3dp"
+                        android:text="Ksh 14.00"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/table_row_button_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/button_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="200dp"
+                        android:backgroundTint="#021DA5"
+                        android:gravity="end"
+                        android:text="PAY NOW"
+                        android:textSize="14sp"
+                        app:cornerRadius="8dp" />
+
+                </TableRow>
+
+                <!-- Repeat the above pattern for the remaining rows (3rd, 4th, and 5th) -->
+
+            </TableLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

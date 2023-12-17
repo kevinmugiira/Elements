@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.elements"
+    namespace = "com.eclecticschama.elements"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.elements"
+        applicationId = "com.eclecticschama.elements"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

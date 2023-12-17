@@ -99,6 +99,7 @@
 
                             <!-- First Row -->
                             <TextView
+                                android:id="@+id/group_details_textview"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -107,6 +108,17 @@
                                 android:textColor="#07A9EA"
                                 android:textSize="14dp"
                                 android:textStyle="bold"/>
+
+                            <!-- Blue line View -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:background="#07A9EA"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_below="@id/group_details_textview"/>
+
 
                         </TableRow>
 
@@ -222,54 +234,75 @@
 
         </androidx.cardview.widget.CardView>
 
-        <TableLayout
-            android:id="@+id/my_upcoming_contributions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/big_card_view"
-            app:layout_constraintBottom_toTopOf="@id/small_card_view" />
+<!--        <TableLayout-->
+<!--            android:id="@+id/my_upcoming_contributions"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/big_card_view"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/small_card_view" >-->
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/my_upcoming_contributions"
-            app:layout_constraintBottom_toTopOf="@id/small_card_view"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+<!--        android:id="@+id/my_upcoming_contributions"-->
+<!--            <TableRow-->
+<!--                android:id="@+id/my_upcoming_contributions"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/big_card_view"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/small_card_view"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent">-->
 
-            <!-- First Row -->
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="30dp"
+                <!-- First Row -->
+                <TextView
+                    android:id="@+id/my_upcoming_contributions"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:padding="8dp"
+                    android:text="My Upcoming Contributions"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/big_card_view"
+                    app:layout_constraintBottom_toTopOf="@id/small_card_view"/>
 
-                android:padding="8dp"
-                android:text="My Upcoming Contributions"
-                android:textSize="12sp"
-                android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/textView_view_all"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="View all"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:gravity="end"
+                    android:textColor="#999898"
+                    app:layout_constraintStart_toEndOf="@id/my_upcoming_contributions"
+                    app:layout_constraintEnd_toStartOf="@id/forwardArrow"
+                    app:layout_constraintTop_toTopOf="@id/my_upcoming_contributions"
+                    app:layout_constraintBottom_toBottomOf="@id/my_upcoming_contributions"/>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="35dp"
-                android:gravity="end"
-                android:padding="8dp"
-                android:text="View all   >"
-                android:textStyle="bold"
-                android:textSize="12sp"
-                android:textColor="#999898"/>
+                <ImageView
+                    android:id="@+id/forwardArrow"
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="45dp"
+                    android:contentDescription="forward"
+                    android:src="@drawable/arrow_forward"
+                    android:gravity="end"
+                    app:layout_constraintTop_toTopOf="@id/textView_view_all"
+                    app:layout_constraintBottom_toBottomOf="@id/textView_view_all"
+                    app:layout_constraintStart_toStartOf="@id/textView_view_all"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
-        </TableRow>
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
 
                 <!-- Content for small_card_view -->
         <androidx.cardview.widget.CardView
             android:id="@+id/small_card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/big_card_view"
-            android:layout_marginTop="10dp"
             android:elevation="28dp"
             app:cardCornerRadius="8dp"
             app:cardBackgroundColor="#F6F6F8"
@@ -289,11 +322,13 @@
                     android:layout_height="wrap_content">
 
                     <TableRow
+                        android:id="@+id/table_row_eclectics_chama"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <!-- First Row -->
                         <TextView
+                            android:id="@+id/text_view_eclectics_chama"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -303,6 +338,7 @@
                             android:textStyle="bold"/>
 
                         <TextView
+                            android:id="@+id/text_view_defaulted"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -315,11 +351,13 @@
                     </TableRow>
 
                     <TableRow
+                        android:id="@+id/table_row_due_date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <!-- First Row -->
                         <TextView
+                            android:id="@+id/text_view_due_date"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -330,6 +368,7 @@
                             android:textStyle="bold"/>
 
                         <TextView
+                            android:id="@+id/text_view_penalty_amount"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -341,11 +380,13 @@
                     </TableRow>
 
                     <TableRow
+                        android:id="@+id/table_row_amount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <!-- Second Row -->
                         <TextView
+                            android:id="@+id/text_view_amount"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -355,6 +396,7 @@
                             android:textSize="12sp"/>
 
                         <TextView
+                            android:id="@+id/text_view_ksh"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -364,12 +406,15 @@
                             android:textStyle="bold"
                             android:textSize="12sp"/>
                     </TableRow>
+
                     <TableRow
+                        android:id="@+id/table_row_button_pay"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center">
 
                         <Button
+                            android:id="@+id/button_pay"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_marginLeft="200dp"
@@ -395,12 +440,13 @@
             android:text="Recent Transactions"
             android:layout_marginStart="35dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="4dp"
-            android:textSize="14sp"
+            android:layout_marginBottom="10dp"
+            android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/small_card_view"
             app:layout_constraintBottom_toTopOf="@id/table_recent_transactions"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/table_recent_transactions"
@@ -408,6 +454,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="36dp"
             android:layout_marginLeft="36dp"
+            android:layout_marginBottom="5dp"
             android:padding="8dp"
             android:elevation="8dp"
             app:layout_constraintTop_toBottomOf="@id/recent_transactions_textview"
